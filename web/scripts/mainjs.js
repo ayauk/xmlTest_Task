@@ -1,6 +1,7 @@
 var counter=2;
 var values=[];
 $( document ).ready(function(){
+    
     $( "#convertbtn" ).click(function() {
         for (var i=0; i<counter; i++){
             var checkid="val"+i.toString();

@@ -13,51 +13,80 @@ body{
 }
 .in-value, .in-label{
     display: block;
-    margin-bottom: 5%;
+    margin-right: 5%;
+    font-family: 'Roboto Condensed', sans-serif;   
+    font-size: 18px;
+    margin-top: 5%;
+}
+.in-label{
+    padding-top: 10%;
+    text-align: right;
 }
 #inputData, #outputData{
   display: inline-block;
   float: left;
-  
+  width: 30%;
   margin-left:15%;
-  height: 400px;
-  width: 400px;
+  height: 300px;
 }   
+#buttons{
+    width:40%;
+    margin-left:10%;
+}
+#buttons, #field{
+    display: block;
+}
 #resultMessage{
     border-style:solid;
     border-color: black;
     border-width: 1px;
     background-color: white;
-    height: 100%;
-    width: 100%;
+    height:80%;
 }
 .in-block-l, .in-block-v{
     display: inline-block;
     float: left;
 }
 .in-block-v{
-    width:60%;
+    width:70%;
 }
 .in-value{
     width:100%;
 }
 .in-block-l{
-    width:40%;
+    width:30%;
+    
 }
 #inValue{
     font-family: 'Roboto Condensed', sans-serif;   
     font-size: 18px;
-    height: 100%;
     width: 100%;
 }
 .button{
-    background-color: black; /* Green */
-    border: none;
+    background-color: black; 
+    border-style: solid;
+    border-color: black;
     color: white;
     padding: 15px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    width: 89%;
+    display: inline-block;
+    float: left;
+    width:30%;
+    margin: 1%;
+}
+#addbtn{
+    padding: 5px 0;
+    background: none;
+    border-color: dimgray;
+    border-style: solid;
+    color: black;
+    width:70%;
+    margin-left: 30%;
+}
+#addbtn:hover{
+    background-color: dimgray;
+    color:white;
 }

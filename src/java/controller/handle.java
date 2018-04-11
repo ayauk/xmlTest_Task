@@ -39,13 +39,15 @@ public class handle extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             XmlObject conv=new XmlObject();
+            int counter=Integer.parseInt(request.getParameter("counter"));
             char operation=request.getParameter("value").charAt(0);
             String xmlString=request.getParameter("value").substring(1);
-            conv.setString(xmlString);
+            conv.setParameters(xmlString, counter);
             try {
                 conv.parse();
                 if(operation=='1'){
-                    out.print("Data: "+conv.concat());
+                    out.print(conv.concat());
+                    
                 }
                 if(operation=='2'){
                     ArrayList<String> s=conv.findUniqueSymbols();
@@ -60,8 +62,8 @@ public class handle extends HttpServlet {
                     if(!conv.validateName()){
                         out.print("<h5>Неверное имя!</h5>");
                     }
-                    else if(!conv.validateEmail()){
-                        out.print("<h5>Неверная почта!</h5>");
+                    else if(!conv.validateNumber()){
+                        out.print("<h5>Неверный номер!</h5>");
                     }
                     else{
                         out.print("<h5>Успешная валидация</h5>");
